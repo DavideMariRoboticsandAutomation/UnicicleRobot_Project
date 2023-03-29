@@ -1,5 +1,6 @@
 /* 
                                                                 Progetto realizzato da Davide Mari
+                                                               
 Spiegazione Generale(Spiegazione totale guardare il file README):
 Si disegna un robot mobile di tipo 'uniciclo'
 e lo si controlla in velocità (senza limiti di saturazione)
@@ -31,6 +32,7 @@ v1 e quella angolare v2.
 Infine si indicano anche le grandezze stimate (xHat,yHat,thetaHat)
 con la loro matrice di covarianza P e il tempo tStep (modificabile 
 da tastiera) che intercorre tra una lettura e la successiva.
+
 */
 
 // Dimensioni finestra
