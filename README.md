@@ -1,4 +1,10 @@
-# UnicicleRobot_Project
+Questo é un mio progetto realizzato con il software PROCESSING durante i miei studi universitari.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Per chi non conoscesse il software PROCESSING:
+E'un ambiente di sviluppo open source utilizzato per creare applicazioni grafiche interattive, visualizzazioni di dati, animazioni, arte generativa e altro ancora. Si basa sul linguaggio di programmazione Java ed è progettato per essere facile da imparare e usare anche per chi non ha una conoscenza approfondita della programmazione.Processing fornisce una vasta gamma di funzioni e librerie grafiche per rendere la creazione di immagini e animazioni più facile e veloce. Inoltre, è possibile integrare librerie di terze parti per estendere le funzionalità di base di Processing.E'stato creato per essere utilizzato sia da artisti che da programmatori e per supportare una vasta gamma di applicazioni, dall'arte digitale all'elaborazione di dati scientifici. È disponibile gratuitamente e può essere eseguito su diverse piattaforme, tra cui Windows, Mac OS X e Linux.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Questo sketch effettua un controllo sulla base della stima della posa dell'uniciclo ottenuta mediante un filtro di Kalman esteso che fonde l'odometria (movimento ruote) con le misure da un certo numero di landmark,il filtro di Kalman usa solo la predizione basata sui passi encoder delle ruote.
 La misura associata a un landmark visibile è l'angolo (detto di bearing) con cui il robot vede questo landmark rispetto al suo orientamento.
