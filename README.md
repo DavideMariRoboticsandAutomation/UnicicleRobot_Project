@@ -1,3 +1,41 @@
+This is a project I created with the PROCESSING software during my university studies.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+For those unfamiliar with PROCESSING:
+It is an open-source development environment used to create interactive graphics applications, data visualizations, animations, generative art, and more. It is based on the Java programming language and is designed to be easy to learn and use, even for those without extensive programming knowledge. Processing provides a wide range of graphics functions and libraries to make creating images and animations easier and faster. Additionally, third-party libraries can be integrated to extend Processing's core functionality. It was created for use by both artists and programmers and to support a wide range of applications, from digital art to scientific data processing. It is available free of charge and can run on various platforms, including Windows, Mac OS X, and Linux.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+This sketch performs a check based on the unicycle pose estimate obtained using an extended Kalman filter that fuses odometry (wheel movement) with measurements from a certain number of landmarks. The Kalman filter uses only the prediction based on the wheel encoder steps.
+The measurement associated with a visible landmark is the angle (called bearing angle) at which the robot sees that landmark relative to its orientation.
+Therefore, a unicycle mobile robot is drawn and controlled at speed (without saturation limits) towards the point clicked with the mouse using the proportional control law. However, the control calculation is performed on the estimated variables rather than the real ones.
+The robot in the estimated position is also drawn on the screen (in yellow) (the real one is drawn in red).
+Additionally, colored triangles with a red border represent the positions of the landmarks present in the environment.
+Within each triangle, an identifier of the type 'Li' for the i-th landmark is also shown.
+Landmarks are visible and therefore white only when they fall within a circular sector of radius rMax, angle betaMax, and are turned on (an angle centered within the unicycle and symmetrical to the unicycle's direction of travel).
+Therefore, when a landmark becomes visible (i.e., falls within the visibility region and is turned on), the bearing angle from that landmark can be used.
+This angle is considered positive when the landmark is to the left of the robot and negative when it is to the right (it is 0 if the landmark is precisely in the direction the unicycle is oriented).
+This measurement is characterized by a zero-mean Gaussian error and a standard deviation of 10 degrees.
+To recap, landmarks within the visibility region are highlighted by their color changing to white. Landmarks turned off by pressing the corresponding number are highlighted by their color changing to black, while landmarks that are turned on but not visible are gray.
+By pressing the 'r' and 'R' keys, you can decrease and increase, respectively, the maximum range rMax of the circular sector.
+Similarly, using the 'b' and 'B' keys, you can vary the maximum bearing angle, betaMax, which defines the opening of the circular sector
+(meaning that the opening angle of this sector is 2*betaMax).
+The minimum positive value for rangeMax is 50 pixels, and the betaMax angle values ​​are between: 10 < betaMax < 280 degrees.
+Using the arrows, you can change the frequency of distance measurements from the
+visible landmarks, or, more precisely, the 'tStep' time between one measurement and the
+next (in any case, not less than the Processing cycle, by default dt = 1/60 s):
+The UP and DOWN arrows increase and decrease this time by 1,
+while the RIGHT and LEFT arrows multiply and divide it by 2,
+respectively (to change it more quickly).
+When this time is very long, the reconstruction becomes purely odometric.
+The screen displays the coordinates (x, y, theta) of the unicycle,
+the coordinates (xDes, Ydes) of the point to be reached, and the time taken to reach it.
+The angular velocities (omegaR, OmegaL) of the two wheels, the longitudinal velocity v1, and the angular velocity v2 are also shown.
+Finally, the estimated quantities (xHat, yHat, thetaHat) are also shown, along with their covariance matrix 'P' and the time 'tStep' (editable from the keyboard) between one reading and the next.
+
+Italian Version:
+
 Questo é un mio progetto realizzato con il software PROCESSING durante i miei studi universitari.
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
